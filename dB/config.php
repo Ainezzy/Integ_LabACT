@@ -3,11 +3,14 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "mananggit";
+$database = "integ_labact";
 
-$conn = new mysqli($servername, $username, $password, $database);
+$con = new mysqli($servername, $username, $password, $database);
 
-if ($conn -> connect_error){
-    
+if ($con){
+    echo "You are connected!";
+} else {
+    echo "Could not connect!";
 }
+
 ?>
