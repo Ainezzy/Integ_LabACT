@@ -24,6 +24,12 @@ include("./includes/sidebar.php");
             <div class="card-body">
               <h5 class="card-title">Users</h5>
 
+              <!-- Add button aligned to the right
+               <div class="d-flex justify-content-end mb-3">
+                <a href="addUser.php">
+                  <button type="button" class="btn-btn-primary">Add</button>
+                </a> -->
+
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
