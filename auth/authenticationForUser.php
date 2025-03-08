@@ -9,8 +9,8 @@ if(!isset($_SESSION['auth'])) {
     exit();
 } 
 else{
-if($_SESSION['userRole'] != 'admin') {
-    $_SESSION['message'] = "You are not authorized as ADMIN";
+if($_SESSION['userRole'] != 'user') {
+    $_SESSION['message'] = "You are not authorized as USER";
     $_SESSION['code'] = "error";
     header("Location: ../../view/users/index.php");
     exit();

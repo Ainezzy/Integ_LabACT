@@ -52,17 +52,17 @@
                     <p class="text-center small">Enter your personal details to create account</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" action="./controller/createAccount.php" method="POST" novalidate>
+                  <form class="row g-3 needs-validation" action="/controller/createAccount.php" method="POST" novalidate>
                     <div class="col-12">
                       <label for="firstname" class="form-label">First Name</label>
-                      <input type="text" name="firstname" class="form-control" id="yourName" required>
+                      <input type="text" name="firstname" class="form-control" id="firstname" required>
                       <div class="invalid-feedback">Please enter your first name!</div>
                     </div>
 
                     <form class="row g-3 needs-validation" novalidate>
                     <div class="col-12">
                       <label for="lastname" class="form-label">Last Name</label>
-                      <input type="text" name="lastname" class="form-control" id="yourName" required>
+                      <input type="text" name="lastname" class="form-control" id="lastname" required>
                       <div class="invalid-feedback">Please enter your last name!</div>
                     </div>
 
@@ -150,6 +150,25 @@
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+
+    const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    }
+  });
+  Toast.fire({
+    icon: "success",
+    title: "Signed in successfully"
+  });
+  </script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
